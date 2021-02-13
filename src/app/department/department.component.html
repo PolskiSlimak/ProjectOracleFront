@@ -1,0 +1,21 @@
+<div class = "container">
+    <h4>
+        Cick here if you want to create deparment:
+    </h4>
+    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
+    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <div class = "content">
+        <div class = "columns">
+            <span class = "c1">department_id</span>
+            <span class = "c2">department_name</span>
+            <span class = "c3">manager_id</span>
+            <span class = "c4">location_id</span>
+        </div>
+        <div class = "rows" *ngFor="let item of d">
+            <span class = "c1">{{item.department_id}}</span>
+            <span class = "c2">{{item.department_name}}</span>
+            <span class = "c3">{{item.manager_id}}</span>
+            <span class = "c4">{{item.location.location_id}}</span>
+        </div>
+    </div>
+</div>

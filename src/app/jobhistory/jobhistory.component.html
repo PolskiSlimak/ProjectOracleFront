@@ -1,0 +1,23 @@
+<div class = "container">
+    <h4>
+        Cick here if you want to create jobhistory:
+    </h4>
+    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
+    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <div class = "content">
+        <div class = "columns">
+            <span class = "c1">employee_id</span>
+            <span class = "c2">start_date</span>
+            <span class = "c3">end_date</span>
+            <span class = "c4">job_id</span>
+            <span class = "c5">department_id</span>
+        </div>
+        <div class = "rows" *ngFor="let item of jh">
+            <span class = "c1">{{item.jobHistoryId.employee_id}}</span>
+            <span class = "c2">{{item.jobHistoryId.start_date | date:'shortDate'}}</span>
+            <span class = "c3">{{item.end_date | date:'shortDate'}}</span>
+            <span class = "c4">{{item.job.job_id}}</span>
+            <span class = "c5">{{item.department.department_id}}</span>
+        </div>
+    </div>
+</div>

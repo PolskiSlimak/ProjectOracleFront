@@ -1,0 +1,35 @@
+<div class = "container">
+    <h4>
+        Cick here if you want to create employee:
+    </h4>
+    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
+    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <div class = "content">
+        <div class = "columns">
+            <span class = "c1">employee_id</span>
+            <span class = "c2">first_name</span>
+            <span class = "c3">last_name</span>
+            <span class = "c4">email</span>
+            <span class = "c5">phone_number</span>
+            <span class = "c6">hire_date</span>
+            <span class = "c7">job_id</span>
+            <span class = "c8">salary</span>
+            <span class = "c9">commision_pct</span>
+            <span class = "c10">manager_id</span>
+            <span class = "c11">department_id</span>
+        </div>
+        <div class = "rows" *ngFor="let item of e">
+            <span class = "c1">{{item.employee_id}}</span>
+            <span class = "c2">{{item.first_name}}</span>
+            <span class = "c3">{{item.last_name}}</span>
+            <span class = "c4">{{item.email}}</span>
+            <span class = "c5">{{item.phone_number}}</span>
+            <span class = "c6">{{item.hire_date | date:'shortDate'}}</span>
+            <span class = "c7">{{item.job_id.job_id}}</span>
+            <span class = "c8">{{item.salary}}</span>
+            <span class = "c9" *ngIf="item.commission_pct">{{item.commission_pct}}</span>
+            <span class = "c10">{{item.manager_id}}</span>
+            <span class = "c11" *ngIf="item.department">{{item.department.department_id}}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class = "container">
+    <h4>
+        Cick here if you want to add country:
+    </h4>
+    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
+    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <div class = "content">
+        <div class = "columns">
+            <span class = "c1">country_id</span>
+            <span class = "c2">country_name</span>
+            <span class = "c3">region_id</span>
+        </div>
+        <div class = "rows" *ngFor="let item of c">
+            <span class = "c1">{{item.country_id}}</span>
+            <span class = "c2">{{item.country_name}}</span>
+            <span class = "c3">{{item.region.region_id}}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class = "container">
+    <h4>
+        Cick here if you want to add region:
+    </h4>
+    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
+    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <div class = "content">
+        <div class = "columns">
+            <span class = "c1">region_id</span>
+            <span class = "c2">region_name</span>
+        </div>
+        <div class = "rows" *ngFor="let item of r">
+            <span class = "c1">{{item.region_id}}</span>
+            <span class = "c2">{{item.region_name}}</span>
+        </div>
+    </div>
+</div>

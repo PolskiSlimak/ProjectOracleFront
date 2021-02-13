@@ -1,0 +1,21 @@
+<div class = "container">
+    <h4>
+        Cick here if you want to create job:
+    </h4>
+    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
+    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <div class = "content">
+        <div class = "columns">
+            <span class = "c1">job_id</span>
+            <span class = "c2">job_title</span>
+            <span class = "c3">min_salary</span>
+            <span class = "c4">max_salary</span>
+        </div>
+        <div class = "rows" *ngFor="let item of j">
+            <span class = "c1">{{item.job_id}}</span>
+            <span class = "c2">{{item.job_title}}</span>
+            <span class = "c3">{{item.min_salary}}</span>
+            <span class = "c4">{{item.max_salary}}</span>
+        </div>
+    </div>
+</div>

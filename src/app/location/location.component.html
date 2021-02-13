@@ -1,0 +1,25 @@
+<div class = "container">
+    <h4>
+        Cick here if you want to add location:
+    </h4>
+    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
+    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <div class = "content">
+        <div class = "columns">
+            <span class = "c1">location_id</span>
+            <span class = "c2">street_address</span>
+            <span class = "c3">postal_code</span>
+            <span class = "c4">city</span>
+            <span class = "c5">state_province</span>
+            <span class = "c6">country_id</span>
+        </div>
+        <div class = "rows" *ngFor="let item of l">
+            <span class = "c1">{{item.location_id}}</span>
+            <span class = "c2">{{item.street_address}}</span>
+            <span class = "c3">{{item.postal_code}}</span>
+            <span class = "c4">{{item.city}}</span>
+            <span class = "c5">{{item.state_province}}</span>
+            <span class = "c6">{{item.country.country_id}}</span>
+        </div>
+    </div>
+</div>
