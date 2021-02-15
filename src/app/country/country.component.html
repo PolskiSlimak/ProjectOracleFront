@@ -1,7 +1,7 @@
 <div class = "container">
-    <h4>
-        Cick here if you want to add country:
-    </h4>
+    <h2>
+        Database records:
+    </h2>
     <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
     <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
     <div class = "content">
@@ -13,7 +13,30 @@
         <div class = "rows" *ngFor="let item of c">
             <span class = "c1">{{item.country_id}}</span>
             <span class = "c2">{{item.country_name}}</span>
-            <span class = "c3">{{item.region.region_id}}</span>
+            <span class = "c3" *ngIf="item.region_id">{{item.region_id}}</span>
         </div>
+    </div>
+    <h2>
+        Add country:
+    </h2>
+    <div class="container">
+        <h5>Country Form</h5>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <table>
+                <tr>
+                    <td>Country Id</td>
+                    <td><input type="text" id="country_id" ngModel required name="first" #first="ngModel" ></td>
+                </tr>
+                <tr>
+                    <td>Country name</td>
+                    <td><input type="text" id="country_name" required ngModel name="second" #s="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Region id</td>
+                    <td><input type="text" id="region_id" required ngModel name="third" #third="ngModel"></td>
+                </tr>
+                <button>Submit</button>
+            </table>
+        </form>
     </div>
 </div>

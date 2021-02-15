@@ -1,5 +1,8 @@
+import { FnParam } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { EntityService } from '../entity.service';
+import { Country } from '../country';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-country',
   templateUrl: './country.component.html',
@@ -17,5 +20,13 @@ export class CountryComponent implements OnInit {
     this.service.getCountries().subscribe((response: any) => {
       this.c = response;
     });
+  }
+  onSubmit(countryForm: NgForm) {
+    let country = new Country(countryForm.value["first"], countryForm.value["second"], countryForm.value["third"]);
+    this.service.putCountries(country).subscribe(
+      (data: Country) => {
+        countryForm.reset();
+      },
+    );
   }
 }

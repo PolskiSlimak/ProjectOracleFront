@@ -73,3 +73,6 @@ input[type="text"] {
 .c3 {
     grid-column: 3/4;
 }
+h2 {
+    text-align: center;
+}
