@@ -1,9 +1,7 @@
 <div class = "container">
-    <h4>
-        Cick here if you want to add location:
-    </h4>
-    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
-    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <h2>
+        Location records:
+    </h2>
     <div class = "content">
         <div class = "columns">
             <span class = "c1">location_id</span>
@@ -21,5 +19,53 @@
             <span class = "c5">{{item.state_province}}</span>
             <span class = "c6">{{item.country_id}}</span>
         </div>
+    </div>
+    <h2>
+        Add Location:
+    </h2>
+    <div class="container">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <table>
+                <tr>
+                    <td>Location id</td>
+                    <td><input type="text" ngModel required name="1" #1="ngModel" ></td>
+                </tr>
+                <tr>
+                    <td>Street Address</td>
+                    <td><input type="text" required ngModel name="2" #2="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Postal code</td>
+                    <td><input type="text" required ngModel name="3" #3="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input type="text" required ngModel name="4" #4="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>State Province</td>
+                    <td><input type="text" required ngModel name="5" #5="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Country id</td>
+                    <td><input type="text" required ngModel name="6" #6="ngModel"></td>
+                </tr>
+                <button>Submit</button>
+            </table>
+        </form>
+    </div>
+    <h2>
+        Delete record by typing id below:
+    </h2>
+    <div class="container">
+        <form #t="ngForm" (ngSubmit)="onSubmitt(t)">
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td><input type="text" ngModel required name="1" #1="ngModel" ></td>
+                </tr>
+                <button>Submit</button>
+            </table>
+        </form>
     </div>
 </div>

@@ -1,9 +1,7 @@
 <div class = "container">
     <h2>
-        Database records:
+        Country records:
     </h2>
-    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
-    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
     <div class = "content">
         <div class = "columns">
             <span class = "c1">country_id</span>
@@ -20,7 +18,6 @@
         Add country:
     </h2>
     <div class="container">
-        <h5>Country Form</h5>
         <form #f="ngForm" (ngSubmit)="onSubmit(f)">
             <table>
                 <tr>
@@ -34,6 +31,20 @@
                 <tr>
                     <td>Region id</td>
                     <td><input type="text" id="region_id" required ngModel name="third" #third="ngModel"></td>
+                </tr>
+                <button>Submit</button>
+            </table>
+        </form>
+    </div>
+    <h2>
+        Delete record by typing id below:
+    </h2>
+    <div class="container">
+        <form #t="ngForm" (ngSubmit)="onSubmitt(t)">
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td><input type="text" ngModel required name="1" #1="ngModel" ></td>
                 </tr>
                 <button>Submit</button>
             </table>

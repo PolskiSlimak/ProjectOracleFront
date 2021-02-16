@@ -1,9 +1,7 @@
 <div class = "container">
-    <h4>
-        Cick here if you want to create employee:
-    </h4>
-    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
-    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <h2>
+        Employee records:
+    </h2>
     <div class = "content">
         <div class = "columns">
             <span class = "c1">employee_id</span>
@@ -31,5 +29,73 @@
             <span class = "c10">{{item.manager_id}}</span>
             <span class = "c11">{{item.department_id}}</span>
         </div>
+    </div>
+    <h2>
+        Add employee:
+    </h2>
+    <div class="container">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <table>
+                <tr>
+                    <td>Employee Id</td>
+                    <td><input type="text" ngModel required name="1" #1="ngModel" ></td>
+                </tr>
+                <tr>
+                    <td>First name</td>
+                    <td><input type="text" required ngModel name="2" #2="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Last name</td>
+                    <td><input type="text" required ngModel name="3" #3="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" required ngModel name="4" #4="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Phone number</td>
+                    <td><input type="text" required ngModel name="5" #5="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Hire date</td>
+                    <td><input type="text" required ngModel name="6" #6="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Job id</td>
+                    <td><input type="text" required ngModel name="7" #7="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td><input type="text" required ngModel name="8" #8="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Commission pct</td>
+                    <td><input type="text" required ngModel name="9" #9="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Manager id</td>
+                    <td><input type="text" required ngModel name="10" #10="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Department id</td>
+                    <td><input type="text" required ngModel name="11" #11="ngModel"></td>
+                </tr>
+                <button>Submit</button>
+            </table>
+        </form>
+    </div>
+    <h2>
+        Delete record by typing id below:
+    </h2>
+    <div class="container">
+        <form #t="ngForm" (ngSubmit)="onSubmitt(t)">
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td><input type="text" ngModel required name="1" #1="ngModel" ></td>
+                </tr>
+                <button>Submit</button>
+            </table>
+        </form>
     </div>
 </div>

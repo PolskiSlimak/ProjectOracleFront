@@ -1,9 +1,7 @@
 <div class = "container">
-    <h4>
-        Cick here if you want to create deparment:
-    </h4>
-    <!-- <input type="text" class = "simple-input" (keyup.enter)="onSearchFromSpecificCategory()" [(ngModel)]="category"> -->
-    <!-- <button class = "modern" (click)="onSearchFromSpecificCategory()">Search jokes</button> -->
+    <h2>
+        Department records:
+    </h2>
     <div class = "content">
         <div class = "columns">
             <span class = "c1">department_id</span>
@@ -17,5 +15,45 @@
             <span class = "c3">{{item.manager_id}}</span>
             <span class = "c4">{{item.location_id}}</span>
         </div>
+    </div>
+    <h2>
+        Add department:
+    </h2>
+    <div class="container">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <table>
+                <tr>
+                    <td>Department Id</td>
+                    <td><input type="text" ngModel required name="first" #first="ngModel" ></td>
+                </tr>
+                <tr>
+                    <td>Department name</td>
+                    <td><input type="text" required ngModel name="second" #s="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Manager id</td>
+                    <td><input type="text" required ngModel name="third" #third="ngModel"></td>
+                </tr>
+                <tr>
+                    <td>Location id</td>
+                    <td><input type="text" required ngModel name="forth" #forth="ngModel"></td>
+                </tr>
+                <button>Submit</button>
+            </table>
+        </form>
+    </div>
+    <h2>
+        Delete record by typing id below:
+    </h2>
+    <div class="container">
+        <form #t="ngForm" (ngSubmit)="onSubmitt(t)">
+            <table>
+                <tr>
+                    <td>Id</td>
+                    <td><input type="text" ngModel required name="1" #1="ngModel" ></td>
+                </tr>
+                <button>Submit</button>
+            </table>
+        </form>
     </div>
 </div>

@@ -29,4 +29,12 @@ export class CountryComponent implements OnInit {
       },
     );
   }
+  onSubmitt(form: NgForm) {
+    let id = new String(form.value["1"]);
+    this.service.deleteCountries(id).subscribe(
+      (data: typeof id) => {
+        form.reset();
+      },
+    );
+  }
 }
